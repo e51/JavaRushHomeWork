@@ -20,7 +20,7 @@ public class Solution {
             initialize();
         }
 
-        private void initialize() {
+        protected void initialize() {
             System.out.println(f1);
         }
     }
@@ -38,4 +38,20 @@ public class Solution {
             System.out.println(f1);
         }
     }
+
+    public static class C extends B {
+        protected int f1 = 4;
+
+        public C(int f1) {
+            super(f1);
+            this.f1 += f1;
+            initialize();
+        }
+
+        protected void initialize() {
+            System.out.println(f1);
+        }
+
+    }
+
 }
